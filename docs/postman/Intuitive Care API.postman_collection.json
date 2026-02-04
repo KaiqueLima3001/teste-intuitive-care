@@ -1,0 +1,350 @@
+{
+  "info": {
+    "_postman_id": "5a98e2c5-b8e3-4ce0-bb83-a3a6119bfddb",
+    "name": "Intuitive Care API",
+    "description": "Coleção contendo todas as rotas da API desenvolvida para o desafio técnico Intuitive Care.  \nInclui endpoints de operadoras, despesas e estatísticas.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52044378",
+    "_collection_link": "https://go.postman.co/collection/52044378-5a98e2c5-b8e3-4ce0-bb83-a3a6119bfddb?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Listar Operadoras",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/operadoras?page=1&limit=10",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "operadoras"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            }
+          ]
+        },
+        "description": "# Listar Operadoras\n\nRetorna uma lista paginada de operadoras de saúde.\n\n## Parâmetros\n\n- `page` - Número da página (padrão: 1)\n- `limit` - Quantidade de registros por página (padrão: 10)\n\n## Resposta\n\nRetorna um array de operadoras em formato JSON com informações de paginação."
+      },
+      "response": [
+        {
+          "name": "Exemplo Listagem Operadoras",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/operadoras?page=1&limit=10",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "operadoras"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.5 Python/3.13.9"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 04 Feb 2026 07:41:19 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "2254"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"data\": [\n        {\n            \"cnpj\": \"19541931000125\",\n            \"modalidade\": \"Administradora de Benefícios\",\n            \"razao_social\": \"18 DE JULHO ADMINISTRADORA DE BENEFÍCIOS LTDA\",\n            \"registro\": \"419761\",\n            \"uf\": \"MG\"\n        },\n        {\n            \"cnpj\": \"22869997000153\",\n            \"modalidade\": \"Odontologia de Grupo\",\n            \"razao_social\": \"2B ODONTOLOGIA OPERADORA DE PLANOS ODONTOLÓGICOS LTDA\",\n            \"registro\": \"421545\",\n            \"uf\": \"SP\"\n        },\n        {\n            \"cnpj\": \"27452545000195\",\n            \"modalidade\": \"Medicina de Grupo\",\n            \"razao_social\": \"2CARE OPERADORA DE SAÚDE LTDA.\",\n            \"registro\": \"421421\",\n            \"uf\": \"SP\"\n        },\n        {\n            \"cnpj\": \"13138885000131\",\n            \"modalidade\": \"Administradora de Benefícios\",\n            \"razao_social\": \"A.P.S. ADMINISTRADORA DE BENEFÍCOS LTDA.\",\n            \"registro\": \"418030\",\n            \"uf\": \"SP\"\n        },\n        {\n            \"cnpj\": \"17505793000101\",\n            \"modalidade\": \"Autogestão\",\n            \"razao_social\": \"ABERTTA SAÚDE - ASSOCIAÇÃO BENEFICENTE DOS EMPREGADOS DA ARCELORMITTAL NO BRASIL\",\n            \"registro\": \"314668\",\n            \"uf\": \"MG\"\n        },\n        {\n            \"cnpj\": \"17687511000126\",\n            \"modalidade\": \"Administradora de Benefícios\",\n            \"razao_social\": \"ABPLUS ADMINISTRADORA DE BENEFÍCIOS LTDA.\",\n            \"registro\": \"419621\",\n            \"uf\": \"RJ\"\n        },\n        {\n            \"cnpj\": \"10458298000131\",\n            \"modalidade\": \"Administradora de Benefícios\",\n            \"razao_social\": \"AD SALUTE ADMINISTRADORA DE BENEFÍCIOS LTDA\",\n            \"registro\": \"418901\",\n            \"uf\": \"RJ\"\n        },\n        {\n            \"cnpj\": \"58280182000181\",\n            \"modalidade\": \"Administradora de Benefícios\",\n            \"razao_social\": \"ADC ADMINISTRADORA DE BENEFICIOS LTDA\",\n            \"registro\": \"424293\",\n            \"uf\": \"SP\"\n        },\n        {\n            \"cnpj\": \"28315826000169\",\n            \"modalidade\": \"Administradora de Benefícios\",\n            \"razao_social\": \"ADM LIFE - ADMINISTRADORA DE BENEFÍCIOS LTDA.\",\n            \"registro\": \"421553\",\n            \"uf\": \"SP\"\n        },\n        {\n            \"cnpj\": \"7867825000157\",\n            \"modalidade\": \"Administradora de Benefícios\",\n            \"razao_social\": \"ADMSERV BENEFÍCIOS E SERVIÇOS LTDA\",\n            \"registro\": \"416932\",\n            \"uf\": \"SP\"\n        }\n    ],\n    \"limit\": 10,\n    \"page\": 1,\n    \"total\": 1109\n}"
+        }
+      ]
+    },
+    {
+      "name": "Detalhes Operadoras",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/operadoras/60214517000105",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "operadoras",
+            "60214517000105"
+          ]
+        },
+        "description": "# Detalhes da Operadora\n\n## Visão Geral\n\nEste endpoint busca informações detalhadas sobre uma operadora de saúde através do seu CNPJ (Cadastro Nacional da Pessoa Jurídica).\n\n## Endpoint\n\n```\nGET /api/operadoras/{cnpj}\n```\n\n## Parâmetros de Caminho\n\n- `cnpj` (string, obrigatório): O CNPJ da operadora de saúde (exemplo: `60214517000105`)\n\n## Resposta\n\nRetorna um objeto JSON contendo os detalhes da operadora:\n\n| Campo | Tipo | Descrição |\n| --- | --- | --- |\n| `cnpj` | string | O CNPJ da operadora |\n| `razao_social` | string | A razão social da operadora |\n| `modalidade` | string | O tipo/modalidade da operadora de saúde |\n| `registro` | string | O número de registro da operadora |\n| `uf` | string | A unidade federativa (estado) onde a operadora está registrada |\n\n## Exemplo de Resposta\n\n```json\n{\n  \"cnpj\": \"60214517000105\",\n  \"modalidade\": \"Cooperativa Médica\",\n  \"razao_social\": \"UNIMED SAO JOSE DOS CAMPOS - COOPERATIVA...\",\n  \"registro\": \"331872\",\n  \"uf\": \"SP\"\n}\n```\n\n## Códigos de Status\n\n- `200 OK`: Detalhes da operadora recuperados com sucesso\n- `404 Not Found`: Operadora com o CNPJ especificado não foi encontrada"
+      },
+      "response": [
+        {
+          "name": "Exemplo de Detalhes Operadoras",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/operadoras/60214517000105",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "operadoras",
+                "60214517000105"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.5 Python/3.13.9"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 04 Feb 2026 07:46:31 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "193"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"cnpj\": \"60214517000105\",\n    \"modalidade\": \"Cooperativa Médica\",\n    \"razao_social\": \"UNIMED SAO JOSE DOS CAMPOS - COOPERATIVA DE TRABALHO MEDICO\",\n    \"registro\": \"331872\",\n    \"uf\": \"SP\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Despesas da Operadora",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/operadoras/60214517000105/despesas",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "operadoras",
+            "60214517000105",
+            "despesas"
+          ]
+        },
+        "description": "# Despesas da Operadora\n\nEste endpoint retorna as despesas de uma operadora específica identificada pelo CNPJ.\n\n## Método\n`GET`\n\n## URL\n```\nhttp://127.0.0.1:5000/api/operadoras/{cnpj}/despesas\n```\n\n## Parâmetros de URL\n\n| Parâmetro | Tipo | Descrição |\n|-----------|------|-----------|\n| cnpj | string | CNPJ da operadora (exemplo: 60214517000105) |\n\n## Exemplo de Requisição\n```\nGET http://127.0.0.1:5000/api/operadoras/60214517000105/despesas\n```\n\n## Resposta\nRetorna uma lista com as despesas da operadora especificada."
+      },
+      "response": [
+        {
+          "name": "Exemplo de Despesas da Operadora",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/operadoras/60214517000105/despesas",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "operadoras",
+                "60214517000105",
+                "despesas"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.5 Python/3.13.9"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 04 Feb 2026 07:46:21 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "300"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"ano\": 2025,\n        \"trimestre\": \"3º Trimestre\",\n        \"valor_despesas\": \"4267462.00\"\n    },\n    {\n        \"ano\": 2025,\n        \"trimestre\": \"2º Trimestre\",\n        \"valor_despesas\": \"7021540.00\"\n    },\n    {\n        \"ano\": 2025,\n        \"trimestre\": \"1º Trimestre\",\n        \"valor_despesas\": \"7021540.00\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Estatísticas Gerais",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/estatisticas",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "estatisticas"
+          ]
+        },
+        "description": "# Estatísticas Gerais\n\nEste endpoint retorna estatísticas gerais sobre despesas de operadoras de saúde, incluindo totais por estado, média de despesas e ranking das principais operadoras.\n\n## Método HTTP e URL\n\n**Método:** `GET`  \n**URL:** `http://127.0.0.1:5000/api/estatisticas`\n\n## Descrição\n\nEste endpoint fornece uma visão consolidada das despesas das operadoras de saúde, permitindo análise por unidade federativa (UF) e identificação das operadoras com maiores despesas.\n\n## Estrutura da Resposta\n\nA resposta retorna um objeto JSON com os seguintes campos:\n\n### Campos Principais\n\n- **`despesas_por_uf`** (array): Lista de despesas totais agrupadas por unidade federativa (estado)\n  - `uf` (string): Sigla da unidade federativa (ex: \"SP\", \"SC\", \"MG\")\n  - `total` (number): Valor total das despesas naquele estado\n\n- **`media_despesas`** (number): Valor médio das despesas calculado sobre todas as operadoras\n\n- **`top_5_operadoras`** (array): Lista das 5 operadoras com maiores despesas totais\n  - `razao_social` (string): Nome/razão social da operadora\n  - `total` (number): Valor total das despesas da operadora\n  - `uf` (string): Unidade federativa onde a operadora está registrada\n\n- **`total_despesas`** (number): Soma total de todas as despesas registradas\n\n## Exemplo de Resposta\n\n```json\n{\n  \"despesas_por_uf\": [\n    {\"total\": 22566441, \"uf\": \"SP\"},\n    {\"total\": 9962640, \"uf\": \"SC\"},\n    {\"total\": 4398575, \"uf\": \"MG\"}\n  ],\n  \"media_despesas\": 153607.699605,\n  \"top_5_operadoras\": [\n    {\n      \"razao_social\": \"UNIMED SAO JOSE DOS CAMPOS - COOPERATIVA...\",\n      \"total\": 18310542,\n      \"uf\": \"SP\"\n    }\n  ],\n  \"total_despesas\": 38862748\n}\n```\n\n## Status Code\n\n**200 OK** - Requisição bem-sucedida, retorna as estatísticas gerais"
+      },
+      "response": [
+        {
+          "name": "Exemplo de Estatísticas Gerais",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/estatisticas",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "estatisticas"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.5 Python/3.13.9"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 04 Feb 2026 07:48:21 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1925"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"despesas_por_uf\": [\n        {\n            \"total\": 22566441,\n            \"uf\": \"SP\"\n        },\n        {\n            \"total\": 9962640,\n            \"uf\": \"SC\"\n        },\n        {\n            \"total\": 4398575,\n            \"uf\": \"MG\"\n        },\n        {\n            \"total\": 491614,\n            \"uf\": \"RS\"\n        },\n        {\n            \"total\": 374424,\n            \"uf\": \"CE\"\n        },\n        {\n            \"total\": 206315,\n            \"uf\": \"MA\"\n        },\n        {\n            \"total\": 195164,\n            \"uf\": \"PR\"\n        },\n        {\n            \"total\": 177550,\n            \"uf\": \"ES\"\n        },\n        {\n            \"total\": 169110,\n            \"uf\": \"RJ\"\n        },\n        {\n            \"total\": 85060,\n            \"uf\": \"PE\"\n        },\n        {\n            \"total\": 80810,\n            \"uf\": \"RO\"\n        },\n        {\n            \"total\": 74225,\n            \"uf\": \"GO\"\n        },\n        {\n            \"total\": 34170,\n            \"uf\": \"BA\"\n        },\n        {\n            \"total\": 24450,\n            \"uf\": \"DF\"\n        },\n        {\n            \"total\": 22200,\n            \"uf\": \"TO\"\n        },\n        {\n            \"total\": 0,\n            \"uf\": \"MS\"\n        },\n        {\n            \"total\": 0,\n            \"uf\": \"MT\"\n        },\n        {\n            \"total\": 0,\n            \"uf\": \"PI\"\n        },\n        {\n            \"total\": 0,\n            \"uf\": \"RN\"\n        },\n        {\n            \"total\": 0,\n            \"uf\": \"SE\"\n        }\n    ],\n    \"media_despesas\": 153607.699605,\n    \"top_5_operadoras\": [\n        {\n            \"razao_social\": \"UNIMED SAO JOSE DOS CAMPOS - COOPERATIVA DE TRABALHO MEDICO\",\n            \"total\": 18310542,\n            \"uf\": \"SP\"\n        },\n        {\n            \"razao_social\": \"UNIMED EXTREMO OESTE CATARINENSE COOPERATIVA DE TRABALHO MÉDICO\",\n            \"total\": 5158438,\n            \"uf\": \"SC\"\n        },\n        {\n            \"razao_social\": \"UNIMED DE CRICIÚMA COOPERATIVA DE TRABALHO MÉDICO DA REGIÃO CARBONÍFERA\",\n            \"total\": 2650154,\n            \"uf\": \"SC\"\n        },\n        {\n            \"razao_social\": \"AGROS - INSTITUTO UFV DE SEGURIDADE SOCIAL\",\n            \"total\": 2016648,\n            \"uf\": \"MG\"\n        },\n        {\n            \"razao_social\": \"UNIMED DIVINOPOLIS - COOPERATIVA DE TRABALHO MEDICO LTDA\",\n            \"total\": 1614966,\n            \"uf\": \"MG\"\n        }\n    ],\n    \"total_despesas\": 38862748\n}"
+        }
+      ]
+    }
+  ]
+}

@@ -10,14 +10,14 @@ Esta é a minha primeira documentação técnica oficial, então procurei ser o 
 
 ## 📂 Estrutura do Projeto
 
-teste-intuitive-care/
-│
-├── api/ # Backend Flask
-├── docs/ # Contem o json do POSTMAN
-├── data/ # Dados brutos e tratados
-├── frontend/ # Interface Web em Vue.js
-├── scripts/ # Scripts ETL
-├── sql/ # Scripts SQL
+teste-intuitive-care/ <br>
+│ <br>
+├── api/ # Backend Flask <br>
+├── docs/ # Contem o json do POSTMAN <br>
+├── data/ # Dados brutos e tratados <br>
+├── frontend/ # Interface Web em Vue.js <br>
+├── scripts/ # Scripts ETL <br>
+├── sql/ # Scripts SQL <br>
 └── requirements.txt # Dependências Python
 
 ---
@@ -37,7 +37,7 @@ teste-intuitive-care/
 1. **Clonar o Repositório**
 
     ```bash
-    git clone <url-do-repositorio>
+    git clone https://github.com/KaiqueLima3001/teste-intuitive-care.git
     cd teste-intuitive-care
     ```
 
@@ -59,7 +59,7 @@ teste-intuitive-care/
     pip install -r requirements.txt
     ```
 
-4. **Configurar Banco de Dados**
+4. **Configurar Banco de Dados** <br>
     Configurar o acesso ao MySQL(host, user, password) no arquivo:
 
     ```bash
@@ -78,7 +78,7 @@ teste-intuitive-care/
     python scripts/transform_data.py
     ```
 
-7. **Executar Pipeline de Dados**
+7. **Executar Pipeline de Dados** <br>
     Este processo cria o banco, cria tabelas e importa os dados.
 
     ```bash
@@ -130,11 +130,11 @@ GET /api/estatisticas
 
 **✔ Interface Web:**
 
-*Tabela paginada de operadoras
-*Busca por CNPJ ou razão social
-*Dashboard com estatísticas
-*Gráfico de despesas por UF
-*Página de detalhes da operadora
+*Tabela paginada de operadoras <br>
+*Busca por CNPJ ou razão social <br>
+*Dashboard com estatísticas <br>
+*Gráfico de despesas por UF <br>
+*Página de detalhes da operadora <br>
 
 ## Trade-offs Técnicos e Decisões de Implementação
 
@@ -352,6 +352,6 @@ Foi criada uma coleção no Postman contendo todas as rotas da API com exemplos 
 2. Clique em Import
 3. Selecione o arquivo localizado em:
 
-```json
+```
 docs/postman/Intuitive Care API.postman_collection.json
 ```
